@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/el2310/CppProject/ImageProcessingSVM/dataset.cpp
+dataset.h
+/home/el2310/CppProject/ImageProcessingSVM/dataset.h
+
+/home/el2310/CppProject/ImageProcessingSVM/dataset.h
+iostream
+-
+fstream
+-
+opencv2/opencv.hpp
+-
+string
+-
+
+/home/el2310/CppProject/ImageProcessingSVM/main.cpp
+iostream
+-
+opencv2/opencv.hpp
+-
+dataset.h
+/home/el2310/CppProject/ImageProcessingSVM/dataset.h
+

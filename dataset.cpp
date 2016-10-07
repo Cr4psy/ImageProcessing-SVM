@@ -14,7 +14,8 @@ string Dataset::getRootPath()
 }
 void Dataset::setRootPath(string path)
 {
-    this->rootPath = rootPath;
+    this->rootPath = path;
+    readDescriptionFile();
 }
 bool Dataset::readDescriptionFile()
 {
@@ -51,7 +52,7 @@ bool Dataset::readDescriptionFile()
 
         this->classNumTestNames.push_back(dataPair);
 
-        //cout<<dataPair.first<<" "<<dataPair.second<<endl;
+        //out<<dataPair.first<<" "<<dataPair.second<<endl;
 
 
     }
