@@ -1,0 +1,3 @@
+corridor	   0		       284		     70
+office		   1		       102	             47
+toilet             2		       374		     63
