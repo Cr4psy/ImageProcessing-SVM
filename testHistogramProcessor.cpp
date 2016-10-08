@@ -1,5 +1,6 @@
 #include "histogramViewer.hpp"
 #include "dataset.h"
+//g++ testHistogramProcessor.cpp histogramProcessor.cpp histogramProcessor.hpp dataset.h dataset.cpp histogramViewer.cpp histogramViewer.hpp $(pkg-config opencv --cflags --libs)
 
 
 int main(int argc, char *argv[])
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
   trainLabel = myData.getTrainingPathsLabels();
   std::cout << trainLabel.size()  << "\n";
 
-  image = imread(trainLabel[1].first);//Read the image from the file
+  image = imread(trainLabel[0].first);//Read the image from the file
 
   myView.setImage(image);
   myView.setNbBins(10);
