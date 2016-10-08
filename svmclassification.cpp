@@ -23,13 +23,17 @@ void SVMClassification::setNbBins(int inNbBins)
 void SVMClassification::process()
 {
      HistogramProcessor myHisto;
+     
      accessData();
 
   //labels.create(trainingData.sizeof(),1,int)
-  
+
+     
+     /*********************************************/
+     //Training data
      for (int i = 0; i <trainingData.size(); i++) {
-    cout << "image path : " << trainingData[i].first  << "\n";
-    cout << "class number :" << trainingData[i].second  << "\n";
+    cout << "image path (TRAIN) : " << trainingData[i].first  << "\n";
+    cout << "class number (TRAIN) :" << trainingData[i].second  << "\n";
   
 
     image = imread(trainingData[i].first);//Extract image from file
@@ -53,22 +57,61 @@ void SVMClassification::process()
     //std::cout << labels.at<int>(i)  << "\n";
     //visualizeHistogram(image,histograms.row(i),this->nbBins);
     }
-     std::cout << "Number of data : "<< histograms.size[0]<< "\n";
-     std::cout << "Computation of the SV"  << "\n";
-    trainSVM(histograms, labels);
+     cout << "Number of data : "<< histograms.size[0]<< "\n";
+     cout << "Computation of the SV"  << "\n";
+     trainSVM(histograms, labels);
 
-   
+     
+
+     /****************************************************/
+     //Test data
+     for (int i = 0; i < testData.size(); i++) {
+       cout << "image path (TEST) : " << testData[i].first  << "\n";
+       cout << "class number (TEST) :" << testData[i].second  << "\n";
+  
+
+    image = imread(testData[i].first);//Extract image from file
+    label =  testData[i].second;
+    
+    //Compute histogram
+    myHisto.setImage(image);
+    myHisto.setNbBins(nbBins);
+    myHisto.process();
+    histo=myHisto.getHisto();
+
+    //Save the histogram
+    histo = histo.t();
+    histogramsTest.push_back(histo);
+
+    //Save the class
+    labelsTest.push_back(label);
+
+    
+    //std::cout << histograms.at<float>(1,i)  << "\n";
+    //std::cout << labels.at<int>(i)  << "\n";
+    //visualizeHistogram(image,histograms.row(i),this->nbBins);
+    }
+     
+     cout << "Number of data (TEST): "<< histogramsTest.size[0]<< "\n";
+     cout << "Find the classes"  << "\n";
+
+       
+     /*To continue"
     
 
 }
 
+void SVMClassification::testSVM()
+{
+  /*TO CONTINUE
+}
 
 void SVMClassification::accessData()//Access to the image in the folder and stock in a vector
 {
   Dataset myData;
  
   myData.setRootPath("dataset/");
-  myData.createDataPaths(1);//1 = 100% of the training data
+  myData.createDataPaths(0.1);//1 = 100% of the training data
   trainingData = myData.getTrainingPathsLabels();
   testData = myData.getTestPathsLabels();
   

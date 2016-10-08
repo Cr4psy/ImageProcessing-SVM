@@ -21,7 +21,7 @@ class SVMClassification
   void process();
   void setNbBins(int inNbBins);
   void trainSVM(Mat histograms, Mat labels);
-  
+  void testSVM();
  private:
   Mat image;
   Dataset myData;
@@ -31,7 +31,9 @@ class SVMClassification
   vector<pair<string,int> > testData;
   Mat histo;
   Mat histograms;
+  Mat histogramsTest;
   Mat labels;
+  Mat labelsTest;
   void visualizeHistogram(const Mat& src, const Mat& hist, int nbins);
   void accessData();
 };
