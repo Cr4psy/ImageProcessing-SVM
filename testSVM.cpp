@@ -19,34 +19,34 @@ int main(int argc, char *argv[])
   mySvm.training();
   mySvm.testSVM();
 
-    mySvm.setNbBins(90);
+  mySvm.setNbBins(90);
   mySvm.setPercentage(1);     
   mySvm.training();
   mySvm.testSVM();
 
-    mySvm.setNbBins(180);
+  mySvm.setNbBins(180);
   mySvm.setPercentage(1);     
   mySvm.training();
   mySvm.testSVM();
 
   
 
-    mySvm.setNbBins(30);
+  mySvm.setNbBins(30);
   mySvm.setPercentage(0.3);     
   mySvm.training();
   mySvm.testSVM();
 
-    mySvm.setNbBins(30);
+  mySvm.setNbBins(30);
   mySvm.setPercentage(0.5);     
   mySvm.training();
   mySvm.testSVM();
 
-      mySvm.setNbBins(30);
+  mySvm.setNbBins(30);
   mySvm.setPercentage(0.7);     
   mySvm.training();
   mySvm.testSVM();
 
-       mySvm.setNbBins(30);
+  mySvm.setNbBins(30);
   mySvm.setPercentage(1);     
   mySvm.training();
   mySvm.testSVM();
