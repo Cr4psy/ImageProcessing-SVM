@@ -9,10 +9,11 @@ int main(int argc, char *argv[])
 
 
   mySvm.setNbBins(10);
+  mySvm.setPercentage(0.05);
+      
+  mySvm.training();
 
-  mySvm.process();
-
-
+  mySvm.testSVM();
   
   return 0;
 }

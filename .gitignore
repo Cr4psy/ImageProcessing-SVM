@@ -1,6 +1,7 @@
 # Personal folder
 test/
 *#*
+*.gch
 
 # Compiled Object files
 *.slo
