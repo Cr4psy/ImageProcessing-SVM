@@ -132,6 +132,78 @@ dataset.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/dataset.cpp.s
 .PHONY : dataset.cpp.s
 
+histogramProcessor.o: histogramProcessor.cpp.o
+.PHONY : histogramProcessor.o
+
+# target to build an object file
+histogramProcessor.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/histogramProcessor.cpp.o
+.PHONY : histogramProcessor.cpp.o
+
+histogramProcessor.i: histogramProcessor.cpp.i
+.PHONY : histogramProcessor.i
+
+# target to preprocess a source file
+histogramProcessor.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/histogramProcessor.cpp.i
+.PHONY : histogramProcessor.cpp.i
+
+histogramProcessor.s: histogramProcessor.cpp.s
+.PHONY : histogramProcessor.s
+
+# target to generate assembly for a file
+histogramProcessor.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/histogramProcessor.cpp.s
+.PHONY : histogramProcessor.cpp.s
+
+histogramViewer.o: histogramViewer.cpp.o
+.PHONY : histogramViewer.o
+
+# target to build an object file
+histogramViewer.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/histogramViewer.cpp.o
+.PHONY : histogramViewer.cpp.o
+
+histogramViewer.i: histogramViewer.cpp.i
+.PHONY : histogramViewer.i
+
+# target to preprocess a source file
+histogramViewer.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/histogramViewer.cpp.i
+.PHONY : histogramViewer.cpp.i
+
+histogramViewer.s: histogramViewer.cpp.s
+.PHONY : histogramViewer.s
+
+# target to generate assembly for a file
+histogramViewer.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/histogramViewer.cpp.s
+.PHONY : histogramViewer.cpp.s
+
+imageProcessing.o: imageProcessing.cpp.o
+.PHONY : imageProcessing.o
+
+# target to build an object file
+imageProcessing.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/imageProcessing.cpp.o
+.PHONY : imageProcessing.cpp.o
+
+imageProcessing.i: imageProcessing.cpp.i
+.PHONY : imageProcessing.i
+
+# target to preprocess a source file
+imageProcessing.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/imageProcessing.cpp.i
+.PHONY : imageProcessing.cpp.i
+
+imageProcessing.s: imageProcessing.cpp.s
+.PHONY : imageProcessing.s
+
+# target to generate assembly for a file
+imageProcessing.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/imageProcessing.cpp.s
+.PHONY : imageProcessing.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -156,6 +228,30 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+svmclassification.o: svmclassification.cpp.o
+.PHONY : svmclassification.o
+
+# target to build an object file
+svmclassification.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/svmclassification.cpp.o
+.PHONY : svmclassification.cpp.o
+
+svmclassification.i: svmclassification.cpp.i
+.PHONY : svmclassification.i
+
+# target to preprocess a source file
+svmclassification.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/svmclassification.cpp.i
+.PHONY : svmclassification.cpp.i
+
+svmclassification.s: svmclassification.cpp.s
+.PHONY : svmclassification.s
+
+# target to generate assembly for a file
+svmclassification.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/svmclassification.cpp.s
+.PHONY : svmclassification.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -168,9 +264,21 @@ help:
 	@echo "... dataset.o"
 	@echo "... dataset.i"
 	@echo "... dataset.s"
+	@echo "... histogramProcessor.o"
+	@echo "... histogramProcessor.i"
+	@echo "... histogramProcessor.s"
+	@echo "... histogramViewer.o"
+	@echo "... histogramViewer.i"
+	@echo "... histogramViewer.s"
+	@echo "... imageProcessing.o"
+	@echo "... imageProcessing.i"
+	@echo "... imageProcessing.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... svmclassification.o"
+	@echo "... svmclassification.i"
+	@echo "... svmclassification.s"
 .PHONY : help
 
 

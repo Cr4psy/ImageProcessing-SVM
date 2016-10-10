@@ -1,24 +1,16 @@
 #ifndef SVMCLASSIFICATION_H
 #define SVMCLASSIFICATION_H
 
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <sstream>
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
-#include <opencv2/opencv.hpp>
+#include "dataset.h" //Use the class dataset in accessData
+#include "histogramProcessor.hpp" //Declare a variable from this class
 
-#include "dataset.h"
-#include "histogramProcessor.hpp"
+#include "imageProcessing.hpp" //Main class
 
 using namespace std;
-//using std::fstream;
 using namespace cv;
 
 
-class SVMClassification
+class SVMClassification: public ImageProcessing
 {
 
  public:
@@ -30,9 +22,8 @@ class SVMClassification
   void setNbBins(int inNbBins);
   
   //Functions
-  void process();//Not used yet
+  virtual void process();//Use to test the SV
   void training();//Use to train the SV
-  void testSVM();//Use to test the SV
   void createFile(string inName);
   
  private:

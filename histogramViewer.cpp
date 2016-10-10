@@ -1,8 +1,5 @@
-
-
 #include "histogramViewer.hpp"
-#include "histogramProcessor.hpp"
-#include "color.h"
+
 
 
 
@@ -38,18 +35,22 @@ void HistogramViewer::setNbBins(int inNbBins)
 //FUNCTIONS
 void HistogramViewer::process()
 {
-  HistogramProcessor myHisto;
+  HistogramProcessor myHisto;//Class to compute the histo
 
+  //Compute the histogram
   myHisto.setImage(image);
   myHisto.setNbBins(nbBins);
   myHisto.process();
   histo=myHisto.getHisto();
 
   
-
-  visualizeHistogram(image,histo,nbBins);
+  //Visualize the histogram
+  viewHisto();
   
-
+}
+void HistogramViewer::viewHisto()
+{
+  visualizeHistogram(image,histo,nbBins);
 }
 
 void HistogramViewer::visualizeHistogram(const Mat& src, const Mat& hist, int nbins)

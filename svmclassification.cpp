@@ -26,7 +26,7 @@ void SVMClassification::setPercentage(float inPercentage)
 //FUNCTIONS
 void SVMClassification::training()
 {   
-  histograms.release();
+  histograms.release();//Erase arrays
   labels.release();
   
   accessData();//Extract the path and class of the dataset and store in a vector
@@ -65,7 +65,7 @@ void SVMClassification::training()
   
 }
 
-void SVMClassification::testSVM()
+void SVMClassification::process()//Test the SVM with test data set and save the result in a  text file
 {
   /****************************************************/
   //Test data
@@ -110,6 +110,7 @@ void SVMClassification::testSVM()
   cout << "Number of data (TEST): "<< nbLabel << "\n";
   cout << "Number of class found correctly :" << nbRightLabel  << "\n";
   accuracy=((float)nbRightLabel/(float)nbLabel)*100;
+  cout << BLU "Accuracy : " << accuracy << "%\n" RESET;
 
   ssResults << nbLabel << '\t' << nbRightLabel << '\t' << accuracy << '\t' << nbBins << '\t' << percentage << '\n';
   
@@ -122,7 +123,7 @@ void SVMClassification::accessData()//Access to the image in the folder and stoc
 {
   Dataset myData;
  
-  myData.setRootPath("dataset/");
+  myData.setRootPath("../dataset/");
   myData.createDataPaths(percentage);//1 = 100% of the training data
   trainingData = myData.getTrainingPathsLabels();
   testData = myData.getTestPathsLabels();

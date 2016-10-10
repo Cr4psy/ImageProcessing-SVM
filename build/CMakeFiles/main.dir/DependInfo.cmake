@@ -5,7 +5,11 @@ SET(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/el2310/CppProject/ImageProcessingSVM/dataset.cpp" "/home/el2310/CppProject/ImageProcessingSVM/build/CMakeFiles/main.dir/dataset.cpp.o"
+  "/home/el2310/CppProject/ImageProcessingSVM/histogramProcessor.cpp" "/home/el2310/CppProject/ImageProcessingSVM/build/CMakeFiles/main.dir/histogramProcessor.cpp.o"
+  "/home/el2310/CppProject/ImageProcessingSVM/histogramViewer.cpp" "/home/el2310/CppProject/ImageProcessingSVM/build/CMakeFiles/main.dir/histogramViewer.cpp.o"
+  "/home/el2310/CppProject/ImageProcessingSVM/imageProcessing.cpp" "/home/el2310/CppProject/ImageProcessingSVM/build/CMakeFiles/main.dir/imageProcessing.cpp.o"
   "/home/el2310/CppProject/ImageProcessingSVM/main.cpp" "/home/el2310/CppProject/ImageProcessingSVM/build/CMakeFiles/main.dir/main.cpp.o"
+  "/home/el2310/CppProject/ImageProcessingSVM/svmclassification.cpp" "/home/el2310/CppProject/ImageProcessingSVM/build/CMakeFiles/main.dir/svmclassification.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

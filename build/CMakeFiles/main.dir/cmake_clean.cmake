@@ -1,6 +1,10 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/main.dir/main.cpp.o"
   "CMakeFiles/main.dir/dataset.cpp.o"
+  "CMakeFiles/main.dir/histogramViewer.cpp.o"
+  "CMakeFiles/main.dir/imageProcessing.cpp.o"
+  "CMakeFiles/main.dir/histogramProcessor.cpp.o"
+  "CMakeFiles/main.dir/svmclassification.cpp.o"
   "main.pdb"
   "main"
 )

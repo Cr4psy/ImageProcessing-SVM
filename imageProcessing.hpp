@@ -1,24 +1,16 @@
 #ifndef IMAGEPROCESSING_H
 #define IMAGEPROCESSING_H
 
-#include <iostream>
+#include "header.hpp" //All the necessary headers
 
-using namespace std;
 
 
 class ImageProcessing
 {
 
-
  public:
-  ImageProcessing();
+  ImageProcessing();//Constructor
   virtual void process() = 0;  //pure virtual function, is not implemented in .cpp
-
-
-
- private:
-
-
 
 };
 

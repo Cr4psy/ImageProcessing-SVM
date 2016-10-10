@@ -92,16 +92,116 @@ CMakeFiles/main.dir/dataset.cpp.o.provides: CMakeFiles/main.dir/dataset.cpp.o.re
 
 CMakeFiles/main.dir/dataset.cpp.o.provides.build: CMakeFiles/main.dir/dataset.cpp.o
 
+CMakeFiles/main.dir/histogramViewer.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/histogramViewer.cpp.o: ../histogramViewer.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/el2310/CppProject/ImageProcessingSVM/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/histogramViewer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/histogramViewer.cpp.o -c /home/el2310/CppProject/ImageProcessingSVM/histogramViewer.cpp
+
+CMakeFiles/main.dir/histogramViewer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/histogramViewer.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/el2310/CppProject/ImageProcessingSVM/histogramViewer.cpp > CMakeFiles/main.dir/histogramViewer.cpp.i
+
+CMakeFiles/main.dir/histogramViewer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/histogramViewer.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/el2310/CppProject/ImageProcessingSVM/histogramViewer.cpp -o CMakeFiles/main.dir/histogramViewer.cpp.s
+
+CMakeFiles/main.dir/histogramViewer.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/histogramViewer.cpp.o.requires
+
+CMakeFiles/main.dir/histogramViewer.cpp.o.provides: CMakeFiles/main.dir/histogramViewer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/histogramViewer.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/histogramViewer.cpp.o.provides
+
+CMakeFiles/main.dir/histogramViewer.cpp.o.provides.build: CMakeFiles/main.dir/histogramViewer.cpp.o
+
+CMakeFiles/main.dir/imageProcessing.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/imageProcessing.cpp.o: ../imageProcessing.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/el2310/CppProject/ImageProcessingSVM/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/imageProcessing.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/imageProcessing.cpp.o -c /home/el2310/CppProject/ImageProcessingSVM/imageProcessing.cpp
+
+CMakeFiles/main.dir/imageProcessing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/imageProcessing.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/el2310/CppProject/ImageProcessingSVM/imageProcessing.cpp > CMakeFiles/main.dir/imageProcessing.cpp.i
+
+CMakeFiles/main.dir/imageProcessing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/imageProcessing.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/el2310/CppProject/ImageProcessingSVM/imageProcessing.cpp -o CMakeFiles/main.dir/imageProcessing.cpp.s
+
+CMakeFiles/main.dir/imageProcessing.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/imageProcessing.cpp.o.requires
+
+CMakeFiles/main.dir/imageProcessing.cpp.o.provides: CMakeFiles/main.dir/imageProcessing.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/imageProcessing.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/imageProcessing.cpp.o.provides
+
+CMakeFiles/main.dir/imageProcessing.cpp.o.provides.build: CMakeFiles/main.dir/imageProcessing.cpp.o
+
+CMakeFiles/main.dir/histogramProcessor.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/histogramProcessor.cpp.o: ../histogramProcessor.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/el2310/CppProject/ImageProcessingSVM/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/histogramProcessor.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/histogramProcessor.cpp.o -c /home/el2310/CppProject/ImageProcessingSVM/histogramProcessor.cpp
+
+CMakeFiles/main.dir/histogramProcessor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/histogramProcessor.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/el2310/CppProject/ImageProcessingSVM/histogramProcessor.cpp > CMakeFiles/main.dir/histogramProcessor.cpp.i
+
+CMakeFiles/main.dir/histogramProcessor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/histogramProcessor.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/el2310/CppProject/ImageProcessingSVM/histogramProcessor.cpp -o CMakeFiles/main.dir/histogramProcessor.cpp.s
+
+CMakeFiles/main.dir/histogramProcessor.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/histogramProcessor.cpp.o.requires
+
+CMakeFiles/main.dir/histogramProcessor.cpp.o.provides: CMakeFiles/main.dir/histogramProcessor.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/histogramProcessor.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/histogramProcessor.cpp.o.provides
+
+CMakeFiles/main.dir/histogramProcessor.cpp.o.provides.build: CMakeFiles/main.dir/histogramProcessor.cpp.o
+
+CMakeFiles/main.dir/svmclassification.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/svmclassification.cpp.o: ../svmclassification.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/el2310/CppProject/ImageProcessingSVM/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/svmclassification.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/svmclassification.cpp.o -c /home/el2310/CppProject/ImageProcessingSVM/svmclassification.cpp
+
+CMakeFiles/main.dir/svmclassification.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/svmclassification.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/el2310/CppProject/ImageProcessingSVM/svmclassification.cpp > CMakeFiles/main.dir/svmclassification.cpp.i
+
+CMakeFiles/main.dir/svmclassification.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/svmclassification.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/el2310/CppProject/ImageProcessingSVM/svmclassification.cpp -o CMakeFiles/main.dir/svmclassification.cpp.s
+
+CMakeFiles/main.dir/svmclassification.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/svmclassification.cpp.o.requires
+
+CMakeFiles/main.dir/svmclassification.cpp.o.provides: CMakeFiles/main.dir/svmclassification.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/svmclassification.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/svmclassification.cpp.o.provides
+
+CMakeFiles/main.dir/svmclassification.cpp.o.provides.build: CMakeFiles/main.dir/svmclassification.cpp.o
+
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
-"CMakeFiles/main.dir/dataset.cpp.o"
+"CMakeFiles/main.dir/dataset.cpp.o" \
+"CMakeFiles/main.dir/histogramViewer.cpp.o" \
+"CMakeFiles/main.dir/imageProcessing.cpp.o" \
+"CMakeFiles/main.dir/histogramProcessor.cpp.o" \
+"CMakeFiles/main.dir/svmclassification.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/main.cpp.o
 main: CMakeFiles/main.dir/dataset.cpp.o
+main: CMakeFiles/main.dir/histogramViewer.cpp.o
+main: CMakeFiles/main.dir/imageProcessing.cpp.o
+main: CMakeFiles/main.dir/histogramProcessor.cpp.o
+main: CMakeFiles/main.dir/svmclassification.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable main"
@@ -113,6 +213,10 @@ CMakeFiles/main.dir/build: main
 
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/main.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/dataset.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/histogramViewer.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/imageProcessing.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/histogramProcessor.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/svmclassification.cpp.o.requires
 .PHONY : CMakeFiles/main.dir/requires
 
 CMakeFiles/main.dir/clean:

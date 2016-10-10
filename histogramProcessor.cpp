@@ -1,14 +1,13 @@
 #include "histogramProcessor.hpp"
-#include "color.h"
+
 /***********************************/
 //CONSTRUCTORS
 HistogramProcessor::HistogramProcessor()
 {
-  std::cout << "No image detected ! "  << "\n";
 }
 HistogramProcessor::HistogramProcessor(int inNbBins, Mat inImage)
 {
-  std::cout << "One image detected!"  << "\n";
+  std::cout << BLU "Image detected!"RESET  << "\n";
   this-> image = inImage;
   this-> nbBins = inNbBins;
 }
@@ -19,7 +18,7 @@ HistogramProcessor::HistogramProcessor(int inNbBins, Mat inImage)
 //SETTERS
 void HistogramProcessor::setImage(Mat inImage)
 {
-  std::cout << "One image detected!"  << "\n";
+  std::cout << BLU "Image detected!" RESET << "\n";
   this->image=inImage;
 }
 void HistogramProcessor::setNbBins(int inNbBins)
@@ -48,22 +47,20 @@ Mat HistogramProcessor::getHisto()
 //FUNCTIONS
 void HistogramProcessor::process()
 {
-      std::cout << "Processing..."  << "\n";
+      std::cout << YEL "Processing... Compute histogram..." RESET << "\n";
       if (image.empty()) {//Check if there is an image
         std::cout << RED "Image empty..." RESET << "\n";
+        return;
+      }
+      else if ((this->nbBins < 10) || (this->nbBins > 180)) {
+        std::cout << RED "The number of bins chosen is outside the range (10-180)" RESET << "\n";
         return;
       }
 
       
       histo=calculateHistogram(this->image, this->nbBins);//Compute the histogram
 
-      /* std::cout <<GRN "Histogram" RESET << "\n";
-      namedWindow("Display window", WINDOW_AUTOSIZE );
-      imshow( "Display window", histo );
-
-      waitKey(0);
-      */
-  return;
+      return;
   
 }
 
