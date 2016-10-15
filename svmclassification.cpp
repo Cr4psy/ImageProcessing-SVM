@@ -76,6 +76,9 @@ void SVMClassification::process()//Test the SVM with test data set and save the 
   nbLabel=0;
   nbRightLabel=0;
 
+  nbLabelClass.clear();
+  nbRightLabelClass.clear();
+
   for (int i = 0; i < nbClass; i++) {
     nbLabelClass.push_back(0);
     nbRightLabelClass.push_back(0);

@@ -1,5 +1,5 @@
 #include "svmclassification.hpp"
-//g++ testSVM.cpp imageProcessing.hpp imageProcessing.cpp histogramProcessor.cpp histogramProcessor.hpp dataset.h dataset.cpp svmclassification.cpp svmclassification.hpp $(pkg-config opencv --cflags --libs)
+//g++ testSVM.cpp imageProcessing.hpp imageProcessing.cpp histogramProcessor.cpp histogramProcessor.hpp dataset.h dataset.cpp svmclassification.cpp svmclassification.hpp header.hpp color.h $(pkg-config opencv --cflags --libs)
 
 int main(int argc, char *argv[])
 {
@@ -9,12 +9,15 @@ int main(int argc, char *argv[])
 
   mySvm.createFile("results.txt");
 
-  mySvm.setNbBins(8);
-  mySvm.setPercentage(0.05);     
+  //Modification Nb Bins
+
+ 
+  mySvm.setNbBins(10);
+  mySvm.setPercentage(1);     
   mySvm.training();
   mySvm.process();//Test the SVM
-  /*
-  mySvm.setNbBins(10);
+  
+  mySvm.setNbBins(20);
   mySvm.setPercentage(1);     
   mySvm.training();
   mySvm.process();
@@ -24,7 +27,17 @@ int main(int argc, char *argv[])
   mySvm.training();
   mySvm.process();
 
-  mySvm.setNbBins(90);
+  mySvm.setNbBins(60);
+  mySvm.setPercentage(1);     
+  mySvm.training();
+  mySvm.process();
+
+    mySvm.setNbBins(90);
+  mySvm.setPercentage(1);     
+  mySvm.training();
+  mySvm.process();
+  
+    mySvm.setNbBins(120);
   mySvm.setPercentage(1);     
   mySvm.training();
   mySvm.process();
@@ -34,7 +47,7 @@ int main(int argc, char *argv[])
   mySvm.training();
   mySvm.process();
 
-  
+  //Modification of % data
 
   mySvm.setNbBins(30);
   mySvm.setPercentage(0.3);     
@@ -51,10 +64,15 @@ int main(int argc, char *argv[])
   mySvm.training();
   mySvm.process();
 
+   mySvm.setNbBins(30);
+  mySvm.setPercentage(0.9);     
+  mySvm.training();
+  mySvm.process();
+
   mySvm.setNbBins(30);
   mySvm.setPercentage(1);     
   mySvm.training();
   mySvm.process();
-  */
+  
   return 0;
 }
