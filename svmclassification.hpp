@@ -41,6 +41,8 @@ class SVMClassification: public ImageProcessing
   int label;
   int nbLabel;
   int nbRightLabel;
+  vector<int> nbLabelClass;
+  vector<int> nbRightLabelClass;
   float percentage;
   float accuracy;
   string name;

@@ -72,10 +72,16 @@ void SVMClassification::process()//Test the SVM with test data set and save the 
 
   int estimatedLabel = 0;
   stringstream ssResults;
+  int nbClass = 3;
   nbLabel=0;
   nbRightLabel=0;
+
+  for (int i = 0; i < nbClass; i++) {
+    nbLabelClass.push_back(0);
+    nbRightLabelClass.push_back(0);
+  }
  
-  
+
   for (int i = 0; i < testData.size(); i++) {
     
       
@@ -97,8 +103,10 @@ void SVMClassification::process()//Test the SVM with test data set and save the 
     estimatedLabel = svm.predict(histo);
     std::cout << "My prediction : " << estimatedLabel  << "\n";
     nbLabel+=1;
+    nbLabelClass[label]+=1;
     if (estimatedLabel == label) {
       nbRightLabel+=1;
+      nbRightLabelClass[label]+=1;
     }
 
     //Save data
@@ -109,10 +117,14 @@ void SVMClassification::process()//Test the SVM with test data set and save the 
      
   cout << "Number of data (TEST): "<< nbLabel << "\n";
   cout << "Number of class found correctly :" << nbRightLabel  << "\n";
+  cout << "Corrdior : " << nbLabelClass[0] << "  -  " << nbRightLabelClass[0]  << "\n" ;
+  cout << "Office : " << nbLabelClass[1] << "  -  " << nbRightLabelClass[1]  << "\n";
+  cout << "Toilet : " << nbLabelClass[2] << "  -  " << nbRightLabelClass[2]  << "\n";
+                                                         
   accuracy=((float)nbRightLabel/(float)nbLabel)*100;
   cout << BLU "Accuracy : " << accuracy << "%\n" RESET;
 
-  ssResults << nbLabel << '\t' << nbRightLabel << '\t' << accuracy << '\t' << nbBins << '\t' << percentage << '\n';
+  ssResults << nbBins << "\t\t" << percentage << "\t\t\t" << nbLabel << "\t\t" << nbRightLabel << "\t\t" << accuracy << "\t\t"  << nbLabelClass[0] << " - " << nbRightLabelClass[0] << "\t\t\t"  << nbLabelClass[1] << " - " << nbRightLabelClass[1] << "\t\t\t"  << nbLabelClass[2] << " - " << nbRightLabelClass[2] << '\n';
   
   saveResults(name, ssResults.str());
   
@@ -139,7 +151,7 @@ void SVMClassification::trainSVM(Mat histograms,Mat labels)
   params.p = 1;
   params.degree=3;
 
-   svm.train_auto(histograms,labels, Mat(), Mat(), params);
+   svm.train(histograms,labels, Mat(), Mat(), params);
 }
 
 void SVMClassification::createFile(string inName)
@@ -150,6 +162,7 @@ void SVMClassification::createFile(string inName)
 
   file.open(inName.c_str(),ios::out);
 
+  file << "Nb bins" << "\t\t" << "% of training data" << "\t" <<  "Nb Data" << "\t\t" <<  "Nb right" << '\t' << "Accuracy" << '\t' << "Corridor (Tot - Good)"  << "\t" <<"Office (Tot - Good)" << "\t" << "Toilet (Tot - Good)"  <<'\n';
   file.close();
 }
 
