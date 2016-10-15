@@ -1,0 +1,9 @@
+# ImageProcessing-SVM
+Project in C++
+Anthony Clerc - 2016
+
+Description.txt
+
+The aim of this program is to analyse images and be able to class them depending of their nature. The support vector machine algorithm is used to classify the pictures. The training data is composed of 760 images, separated in 3 different classes (Corridor, Office & Toilet). The features extracted from the images are color histograms, which allows to diminish the number of features and simplify the computation. The test data set is made of 180 images.
+
+This kind of machin learning algorithm is used for several purpose. For instance, to descript a handwritten text from an image (OCR) in google translate or to recognise automatically faces when we take a picture. It also used in biology to classify proteins. Actually, there is no limitation to use this algorithm, however it will not be always the most powerful.

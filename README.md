@@ -2,6 +2,8 @@
 Project in C++
 Anthony Clerc - 2016
 
+README.txt
+
 The aim of the project is to classify different images, fot more informations, see "Description.txt".
 
 The program is made of different classes that are described below. This classes are used in the main.cpp file, which gives different options to the user, such as; training a classifier and test it or visualize a histogram.
