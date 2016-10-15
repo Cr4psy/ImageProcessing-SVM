@@ -31,8 +31,6 @@ void SVMClassification::training()
   
   accessData();//Extract the path and class of the dataset and store in a vector
 
-  //labels.create(trainingData.sizeof(),1,int)
-
      
   /*********************************************/
   //Training data
@@ -53,10 +51,7 @@ void SVMClassification::training()
     histograms.push_back(histo);//Save the histo in an array
     labels.push_back(label);//Save the labels in an array
 
-    //std::cout << histograms.at<float>(1,i)  << "\n";
-    //std::cout << labels.at<int>(i)  << "\n";
-    //visualizeHistogram(image,histograms.row(i),this->nbBins);
-  }
+ }
   cout << "Number of data : "<< histograms.size[0]<< "\n";
   cout << "Computation of the SV"  << "\n";
 
@@ -112,9 +107,6 @@ void SVMClassification::process()//Test the SVM with test data set and save the 
       nbRightLabelClass[label]+=1;
     }
 
-    //Save data
-    //histogramsTest.push_back(histo);//Save all the histo value in an array  
-    //labelsTest.push_back(label);//Save all the labels in a array
     
   }
      
@@ -131,7 +123,6 @@ void SVMClassification::process()//Test the SVM with test data set and save the 
   
   saveResults(name, ssResults.str());
   
-  /*To continue*/
 }
 
 void SVMClassification::accessData()//Access to the image in the folder and stock in a vector

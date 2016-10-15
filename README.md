@@ -63,14 +63,19 @@ SVMClassification :
 This class train a SVM classifier and test it.
 
      Functions :
-
-     Getters :
+     - process : Test the classifier (SVM) with test data and save the result in a text file.
+     - training : Train the classifier with the training data
+     - createFile : Create a new text file with header
 
      Setters :
-
-
+     - setPercentage : Set the percentage of training data that is used to train the classifier
+     - setNbBins : Set the number of bins for the histogram.
 
 ################################################
+
+The project require also different files to work such as header.hpp, that regroups all the header necessery for the project and color.h which define some color for the terminal.
+
+
 
 
 
