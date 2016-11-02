@@ -1,1 +1,2 @@
 Nb bins		% of training data	Nb Data		Nb right	Accuracy	Corridor (Tot - Good)	Office (Tot - Good)	Toilet (Tot - Good)
+10		0.3			180		98		54.4444		70 - 34			47 - 28			63 - 36
