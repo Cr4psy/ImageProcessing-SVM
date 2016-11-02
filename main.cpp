@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 {
   srand(time(NULL));//For random number
   
-    cout<< GRN "Hello!! Welcome to the Image Procesing Program!"RESET <<endl;
+    cout<< GRN "Hello!! Welcome to the Image Processing Program!"RESET <<endl;
     while(1)
     {
         int command = -1;
@@ -44,6 +44,7 @@ int main(int argc, char **argv)
 
             //Extract features from image and compute the SV and test it
             mySvm.setNbBins(numbins);
+            mySvm.setRootPath(datasetpath);
             mySvm.setPercentage((float)datapercentage/100.0);
             mySvm.training();//Train the svm
             mySvm.process();//Test the svm with the training dataset
@@ -56,15 +57,8 @@ int main(int argc, char **argv)
 
           parametersEntry(command, datasetpath, numbins, datapercentage, nameFile);
         
-          myData.setRootPath("../dataset/");
-          myData.createDataPaths(1);//1 = 100% of the training data
-          trainLabel = myData.getTrainingPathsLabels();
-
-
-          randVal = rand()%trainLabel.size();
-          
-          image = imread(trainLabel[randVal].first);//Read the image from the file
-
+          //image =imread("");//Read the image from the file
+          image = imread(datasetpath);
           myView.setImage(image);
           myView.setNbBins(numbins);
           myView.process();
@@ -90,23 +84,33 @@ void parametersEntry(int mode, string& datasetpath, int& numbins, int& dataperce
 
   if (choice==0) {
                   
-                
-    cout<<"Please enter the root path of the dataset in format /home/xx/yy/: ";
-    cin>>datasetpath;
-
     cout<<"Please enter the number of bins (10-180): ";
     cin>>numbins;
+
     
-    if (mode == 0) {//If training data
-     cout<<"Please enter the percentage of training data to be used (30-100): ";
-     cin>>datapercentage;
+    if (mode == 0) {//If training
+      cout<<"Please enter the root path of the dataset in format /home/xx/yy/dataset/ : ";
+      cin>>datasetpath;
+      
+      cout<<"Please enter the percentage of training data to be used (30-100): ";
+      cin>>datapercentage;
  
-     cout<<"Pleaser enter the name of the file to save the result :";
-     cin >>nameFile;
+      cout<<"Pleaser enter the name of the file to save the result :";
+      cin >>nameFile;
+    }
+    else if (mode == 1) { //If view histo  
+      cout<<"Please enter the root path of the image (/home/el2310/xx/yy.png) : ";
+      cin>>datasetpath;
     }
   }
   else{
-    datasetpath = "../dataset/";
+    if (mode == 0) {//If training
+      datasetpath = "../dataset/";
+    }
+    else {//If view histo
+      datasetpath = "../dataset/test/corridor/image0.png";
+    }
+    
     numbins = 10;
     datapercentage = 30;
     nameFile = "result.txt";

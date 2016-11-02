@@ -72,6 +72,7 @@ This class train a SVM classifier and test it.
      Setters :
      - setPercentage : Set the percentage of training data that is used to train the classifier
      - setNbBins : Set the number of bins for the histogram.
+     - setRootPath : Set the root path for the dataset
 
 ################################################
 

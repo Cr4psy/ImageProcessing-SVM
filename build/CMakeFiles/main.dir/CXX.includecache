@@ -42,13 +42,29 @@ header.hpp
 imageProcessing.hpp
 /home/el2310/CppProject/ImageProcessingSVM/imageProcessing.hpp
 
+/home/el2310/CppProject/ImageProcessingSVM/histogramViewer.hpp
+histogramProcessor.hpp
+/home/el2310/CppProject/ImageProcessingSVM/histogramProcessor.hpp
+header.hpp
+/home/el2310/CppProject/ImageProcessingSVM/header.hpp
+imageProcessing.hpp
+/home/el2310/CppProject/ImageProcessingSVM/imageProcessing.hpp
+
 /home/el2310/CppProject/ImageProcessingSVM/imageProcessing.hpp
 header.hpp
 /home/el2310/CppProject/ImageProcessingSVM/header.hpp
 
-/home/el2310/CppProject/ImageProcessingSVM/svmclassification.cpp
+/home/el2310/CppProject/ImageProcessingSVM/main.cpp
+header.hpp
+/home/el2310/CppProject/ImageProcessingSVM/header.hpp
+imageProcessing.hpp
+/home/el2310/CppProject/ImageProcessingSVM/imageProcessing.hpp
 svmclassification.hpp
 /home/el2310/CppProject/ImageProcessingSVM/svmclassification.hpp
+histogramViewer.hpp
+/home/el2310/CppProject/ImageProcessingSVM/histogramViewer.hpp
+dataset.h
+/home/el2310/CppProject/ImageProcessingSVM/dataset.h
 
 /home/el2310/CppProject/ImageProcessingSVM/svmclassification.hpp
 dataset.h

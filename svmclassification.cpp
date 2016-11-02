@@ -17,6 +17,10 @@ void SVMClassification::setPercentage(float inPercentage)
 {
   this->percentage=inPercentage;
 }
+void SVMClassification::setRootPath(string path)
+{
+  this->rootPath = path;
+}
 
 /***********************************/
 //GETTERS
@@ -129,7 +133,7 @@ void SVMClassification::accessData()//Access to the image in the folder and stoc
 {
   Dataset myData;
  
-  myData.setRootPath("../dataset/");
+  myData.setRootPath(rootPath);
   myData.createDataPaths(percentage);//1 = 100% of the training data
   trainingData = myData.getTrainingPathsLabels();
   testData = myData.getTestPathsLabels();

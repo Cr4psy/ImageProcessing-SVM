@@ -20,6 +20,7 @@ class SVMClassification: public ImageProcessing
   //Setters
   void setPercentage(float inPercentage);
   void setNbBins(int inNbBins);
+  void setRootPath(string path);
   
   //Functions
   virtual void process();//Use to test the SV
@@ -46,6 +47,7 @@ class SVMClassification: public ImageProcessing
   float percentage;
   float accuracy;
   string name;
+  string rootPath;
   vector<pair<string,int> > trainingData;
   vector<pair<string,int> > testData;
   Mat image;
